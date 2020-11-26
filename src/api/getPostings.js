@@ -1,10 +1,10 @@
 import client from './Client';
 
 const endPoint = '/posts';
-const getPostings = client.get(endPoint);
-
-console.log(getPostings.data);
+const GetPosts = () => client.get(endPoint);
+const GetOnePost = (id) => client.get(`/posts/${id}`);
 
 export default {
-  getPostings,
+  GetPosts,
+  GetOnePost,
 };

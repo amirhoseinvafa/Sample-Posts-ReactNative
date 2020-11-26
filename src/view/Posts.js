@@ -1,9 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
-// import listingsApi from '../api/Listings';
-
-const Posts = ({item, press}) => {
+const Posts = ({item, press, navigation}) => {
   return (
     <View style={styles.card} key={item.id}>
       <View style={styles.cardTitle}>
@@ -20,7 +18,11 @@ const Posts = ({item, press}) => {
           title="Delet post"
           color="#AB0000"
         />
-        <Button title="EDIT" color="#638200" />
+        <Button
+          onPress={() => navigation.navigate('edit')}
+          title="ADD"
+          color="#638200"
+        />
       </View>
     </View>
   );
